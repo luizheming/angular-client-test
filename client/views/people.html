@@ -1,0 +1,21 @@
+<header>
+	<h1>{{ title }}</h1>	
+	<input type="text" ng-class="(people.length == 0) ? 'disabled' : '' " class="search" placeholder="Tap to search person by name" ng-model="search['name']">	
+</header>
+
+<div class="content">
+	<ul>
+		<li class="box-model" ng-repeat="p in people | filter:search" ng-click="viewDetail(p.id)">
+			<div class="name">
+				<span>{{ p.name }}</span>
+			</div>
+			<p data-id="{{ p.id }}">{{ p.disclosableInfo }}</p>
+		</li>
+
+		<li>
+			<p class="error" ng-if="!people || people.length == 0">
+				Oops! Unable to load people list. Please take a look at your server.
+			</p>
+		</li>
+	</ul>
+</div>

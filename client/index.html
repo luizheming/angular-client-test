@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-language" content="pt-br" />
+	<title>Angular Cinq client</title>
+	<link rel="stylesheet" href="css/app.min.css">
+
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+	<!-- APPLICATION -->	
+	<script src="js/min/app.min.js"></script>
+
+	<base href="/">
+
+</head>
+<body ng-app="CinqApplication">
+
+	<div class="container" ng-view></div>
+
+	<div id="screenNotSupported">
+		<p>Your screen is not supported.</p>
+	</div>
+
+	<!-- CONTROLLERS -->
+	<script src="js/min/peopleCtrl.min.js"></script>
+	<!-- / CONTROLLERS -->
+
+	<!-- SERVICES -->
+	<script src="js/min/peopleService.min.js"></script>
+	<!-- / SERVICES -->
+</body>
+</html>
